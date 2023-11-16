@@ -14,3 +14,24 @@ collection = db['to_do']
 doc_count = collection.count_documents({})
 print(doc_count)
 
+to_do = []
+
+resturant_1 = {"restaurant_id":"40356018","borough":"Brooklyn","cuisine":"American",}
+
+to_do.append(resturant_1)
+
+resturant_2 = {"name":"Wilken'S Fine Food", "borough":"Brooklyn","cuisine":"Delicatessen"}
+
+to_do.append(resturant_2)
+
+try:
+    collection.insert_many(to_do)
+except OperationFailure as ex:
+    raise ex
+
+
+
+
+
+
+
