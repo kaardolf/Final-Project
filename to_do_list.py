@@ -24,6 +24,25 @@ resturant_2 = {"name":"Wilken'S Fine Food", "borough":"Brooklyn","cuisine":"Deli
 
 to_do.append(resturant_2)
 
+resturant_3 = {"name":"Kosher Island", "borough":"Staten Island","cuisine":"Jewish/Kosher"}
+
+to_do.append(resturant_3)
+
+resturant_4 = {"name ": "Wendy'S", "borough" : "Brooklyn", "cuisine" : "Hamburgers"}
+
+resturant_5 = {"name":"Morris Park Bake Shop", "borough":"Bronx","cuisine":"Bakery"}
+
+resturant_6 = {"name":"Tov Kosher Kitchen","borough":"Queens","cuisine":"Jewish/Kosher"}
+
+resturant_7 = {"name":"Brunos On The Boulevard","borough":"Queens","cuisine":"American"}
+
+resturant_8 = {"name":"Regina Caterers","borough":"Brooklyn","cuisine":"American"}
+
+resturant_9 = {"name":"Taste The Tropics Ice Cream","borough":"Brooklyn","cuisine":"Ice Cream, Gelato, Yogurt, Ices"}
+
+resturant_10 = {"name":"Wild Asia","borough":"Bronx","cuisine":"American"}
+
+resturant_11 = {"name":"C & C Catering Service","borough":"Brooklyn","cuisine":"American"}
 try:
     collection.insert_many(to_do)
 except OperationFailure as ex:
