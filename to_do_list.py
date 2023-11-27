@@ -16,21 +16,21 @@ print(doc_count)
 
 to_do = []
 
-#American Manhattan- Reif's travern
+#"name":"Reif's travern", "borough":"Manhattan","cuisine":"American"
 #Done #American Brooklyn- Regina Caterers
-#American Queens- Maloney's bar
-#Pizza Staten Island- Denino's Pizzeria Tavern
-#Pizza Queens- Jack's Pizza and pasta
-#Pizza Brooklyn- Fascati's Pizzeria
-#Irish Manhattan - Killarney Rose
-#Irish Queens - O'Hanlon's Pub
-#Irish Bronx - Mcdwyers Rub (121)
-#Italian Queens - Piccola Venezia
-#Italian Staten Island - Marina Cafe
-#Italian Manhattan - Forlinis Resturant
-#Mexican Manhattan - Cuchifrito
-#Mexican Brooklyn - Casa Pepe
-#Mexican Manhattan - Mexico Lindo Resturant
+#"name":"Maloney's bar", "borough":"Queens","cuisine":"American"
+#"name":"Denino's Pizzeria Tavern", "borough":"Staten Island","cuisine":"Pizza"
+#"name":"Jack's Pizza and pasta", "borough":"Queens","cuisine":"Pizza"
+#"name":"Fascati's Pizzeria", "borough":"Brooklyn","cuisine":"Pizza"
+#"name":"Killarney Rose", "borough":"Manhattan","cuisine":"Irish"
+#"name":"O'Hanlon's Pub", "borough":"Queens","cuisine":"Irish"
+#"name":"Mcdwyers Rub", "borough":"Bronx","cuisine":"Irish"
+#"name":"Piccola Venezia","borough":"Queens","cuisine":"Italian"
+#"name":"Marina Cafe","borough":"Staten Island","cuisine":"Italian"
+#"name": "Forlinis Resturant", "borough":"Manhattan","cuisine":"Italian"
+#"name":"Cuchifrito","borough":"Manhattan","cuisine":"Mexican"
+#"name":"Casa Pepe","borough":"Brooklyn","cuisine":"Mexican"
+#"name":"Mexico Lindo Resturant","borough":"Manhattan","cuisine":"Mexican"
 #Done #Delicatessen Staten Island - Plaza bagels and deli
 #Done #Delicatessen Brooklyn - Wilken's Fine food
 #Done #Delicatessen Staten Island - B & M Hot Bagel and Grocery
@@ -62,6 +62,8 @@ to_do.append(resturant_5)
 #keep
 resturant_6 = {"name":"B & M Hot Bagel & Grocery","borough":"Staten Island","cuisine":"Delicatessen"}
 to_do.append(resturant_6)
+
+
 
 
 
