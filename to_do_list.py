@@ -65,8 +65,6 @@ to_do.append(resturant_6)
 
 
 
-
-
 try:
     collection.insert_many(to_do)
 except OperationFailure as ex:
