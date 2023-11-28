@@ -22,7 +22,6 @@ print(doc_count)
 
 to_do = []
 
-
 def fill_table() -> None:
     """pre fill table with data"""
     #11 Brooklyn
