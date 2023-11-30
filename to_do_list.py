@@ -22,23 +22,10 @@ print(doc_count)
 
 to_do = []
 
-<<<<<<< HEAD
-def fill_table() -> None:
-    """pre fill table with data"""
-    #11 Brooklyn
-    #1 Staten
-    #2 Bronx
-    resturant_1 = {"restaurant_id":"40356018","borough":"Brooklyn","cuisine":"American",}
-
-    to_do.append(resturant_1)
-
-    resturant_2 = {"name":"Wilken'S Fine Food", "borough":"Brooklyn","cuisine":"Delicatessen"}
-=======
 def fill_table() -> None: 
  """pre fill table with data"""	
 	resturant_1 = {"name":"Reif's travern", "borough":"Manhattan","cuisine":"American"}
 	to_do.append(resturant_1)
->>>>>>> KAA
 
 	resturant_2 = {"name":"Regina Caterers","borough":"Brooklyn","cuisine":"American"}
 	to_do.append(resturant_2)
