@@ -29,8 +29,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "American",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_1)
 
     resturant_2 = {
@@ -38,8 +38,8 @@ def fill_table() -> None:
         "borough": "Brooklyn",
         "cuisine": "American",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_2)
 
     resturant_3 = {
@@ -47,8 +47,8 @@ def fill_table() -> None:
         "borough": "Queens",
         "cuisine": "American",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_3)
 
     resturant_4 = {
@@ -56,8 +56,8 @@ def fill_table() -> None:
         "borough": "Staten Island",
         "cuisine": "Pizza",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_4)
 
     resturant_5 = {
@@ -65,8 +65,8 @@ def fill_table() -> None:
         "borough": "Queens",
         "cuisine": "Pizza",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_5)
 
     resturant_6 = {
@@ -74,8 +74,8 @@ def fill_table() -> None:
         "borough": "Brooklyn",
         "cuisine": "Pizza",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_6)
 
     resturant_7 = {
@@ -83,8 +83,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "Irish",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_7)
 
     resturant_8 = {
@@ -92,8 +92,8 @@ def fill_table() -> None:
         "borough": "Queens",
         "cuisine": "Irish",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_8)
 
     resturant_9 = {
@@ -101,8 +101,8 @@ def fill_table() -> None:
         "borough": "Bronx",
         "cuisine": "Irish",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_9)
 
     resturant_10 = {
@@ -110,8 +110,8 @@ def fill_table() -> None:
         "borough": "Queens",
         "cuisine": "Italian",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_10)
 
     resturant_11 = {
@@ -119,8 +119,8 @@ def fill_table() -> None:
         "borough": "Staten Island",
         "cuisine": "Italian",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_11)
 
     resturant_12 = {
@@ -128,8 +128,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "Italian",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_12)
 
     resturant_13 = {
@@ -137,8 +137,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "Mexican",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_13)
 
     resturant_14 = {
@@ -146,8 +146,8 @@ def fill_table() -> None:
         "borough": "Brooklyn",
         "cuisine": "Mexican",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_14)
 
     resturant_15 = {
@@ -155,8 +155,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "Mexican",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_15)
 
     resturant_16 = {
@@ -164,8 +164,8 @@ def fill_table() -> None:
         "borough": "Brooklyn",
         "cuisine": "Delicatessen",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_16)
 
     resturant_17 = {
@@ -173,8 +173,8 @@ def fill_table() -> None:
         "borough": "Staten Island",
         "cuisine": "Delicatessen",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_17)
 
     resturant_18 = {
@@ -182,8 +182,8 @@ def fill_table() -> None:
         "borough": "Staten Island",
         "cuisine": "Delicatessen",
         "ave_rating": None,
-        "ratings": [],
-        "comments": []}
+        "ratings": [int],
+        "comments": [str]}
     to_do.append(resturant_18)
 
     try:
@@ -200,20 +200,20 @@ def insert_review() -> None:
 
     if info is not None:
         ratings = info['ratings']
-        comments = info ['comments']
+        comments = info['comments']
         temp_rating = input("Enter rating for the restraunt [1-5]:")
         valid_rating = True
         while valid_rating:
             if temp_rating.isdigit():
-                if(int(temp_rating)<=0) or (int(temp_rating)>=6):
+                if (int(temp_rating) <= 0) or (int(temp_rating) >= 6):
                     print("Input not between 1 and 5")
-                    temp_rating = input("Enter rating for the restraunt [1-5]:")
-                else: 
+                    temp_rating = input("Enter rating "
+                                        "for the restraunt [1-5]:")
+                else:
                     valid_rating = False
             else:
                 print("Input not integer")
                 temp_rating = input("Enter rating for the restraunt [1-5]:")
-
 
         temp_comment = input("Enter any commnets for the restraunt:")
 
@@ -226,12 +226,18 @@ def insert_review() -> None:
             new_rating = new_rating + i
         new_rating = new_rating / len(ratings)
 
-        collection.find_one_and_update({'name': name},
-                                    {'$set': {'ave_rating': new_rating}}, new=True)
-        collection.find_one_and_update({'name': name},
-                                    {'$set': {'ratings': ratings}}, new=True)
-        collection.find_one_and_update({'name': name},
-                                    {'$set': {'comments': comments}}, new=True)
+        collection.find_one_and_update(
+            {'name': name},
+            {'$set': {'ave_rating': new_rating}},
+            new=True)
+        collection.find_one_and_update(
+            {'name': name},
+            {'$set': {'ratings': ratings}},
+            new=True)
+        collection.find_one_and_update(
+            {'name': name},
+            {'$set': {'comments': comments}},
+            new=True)
     else:
         print("No restaurant found that has that name.")
         input("Enter to exit: ")
@@ -244,7 +250,7 @@ def insert_one() -> None:
     borough = input("Enter the borough for the restraunt: ")
 
     restraunt = {"name": name, "cuisine": cuisine, "borough": borough,
-                 "ave_rating": None, "ratings": [], "comments": []}
+                 "ave_rating": None, "ratings": [int], "comments": [str]}
 
     try:
         collection.insert_one(restraunt)
@@ -266,7 +272,7 @@ def insert_many() -> None:
         borough = input("Enter the borough for the restraunt: ")
 
         restraunt_temp = {"name": name, "cuisine": cuisine, "borough": borough,
-                          "ave_rating": None, "ratings": [], "comments": []}
+                          "ave_rating": None, "ratings": [int], "comments": [str]}
 
         restraunts.append(restraunt_temp)
 
@@ -296,9 +302,11 @@ def read_all() -> None:
             ave_rating = doc['ave_rating']
             rating = doc['ratings']
             comments = doc['comments']
-            print(f'{name} in {borough} serves {cuisine}, and it rated {ave_rating}/5')
+            print(f'{name} in {borough} serves '
+                  f'{cuisine}, and it rated {ave_rating}/5')
             if ave_rating is not None:
-                rate_reveiws = input("would you like to see the reveiws for this restraunt? [Y/N]:")
+                rate_reveiws = input("would you like to see the "
+                                     "reveiws for this restraunt? [Y/N]:")
                 if rate_reveiws == "Y" or rate_reveiws == "y":
                     for i, rating in enumerate(rating):
                         print(f'{rating}/5. Comments: {comments[i]}')
@@ -321,9 +329,11 @@ def read_one() -> None:
         ave_rating = restaurant['ave_rating']
         rating = restaurant['ratings']
         comments = restaurant['comments']
-        print(f'{name} in {borough} serves {cuisine}, and it rated {ave_rating}/5')
+        print(f'{name} in {borough} serves'
+              f'{cuisine}, and it rated {ave_rating}/5')
         if ave_rating is not None:
-            rate_reveiws = input("would you like to see the reveiws for this restraunt? [Y/N]:")
+            rate_reveiws = input("would you like to see the "
+                                 "reveiws for this restraunt? [Y/N]:")
             if rate_reveiws == "Y" or rate_reveiws == "y":
                 for i, rating in enumerate(rating):
                     print(f'{rating}/5. Comments: {comments[i]}')
@@ -338,20 +348,27 @@ def update() -> None:
     """update data"""
     name = input("Enter the name of the restraunt you want to edit: ")
 
-    change = input("Enter the item you would like to change [name, cuisine, borough]: ")
+    change = input("Enter the item you would like to change."
+                   "[name, cuisine, borough]: ")
 
     if change == "name":
         update_data = input("Enter the new name: ")
-        updated = collection.find_one_and_update({'name': name},
-                                                {'$set': {'name': update_data}}, new=True)
+        updated = collection.find_one_and_update(
+            {'name': name},
+            {'$set': {'name': update_data}},
+            new=True)
     elif change == "cuisine":
         update_data = input("Enter the new cuisine: ")
-        updated = collection.find_one_and_update({'name': name},
-                                                 {'$set': {'cuisine': update_data}}, new=True)
+        updated = collection.find_one_and_update(
+            {'name': name},
+            {'$set': {'cuisine': update_data}},
+            new=True)
     elif change == "borough":
         update_data = input("Enter the new borough: ")
-        updated = collection.find_one_and_update({'name': name},
-                                                {'$set': {'borough': update_data}}, new=True)
+        updated = collection.find_one_and_update(
+            {'name': name},
+            {'$set': {'borough': update_data}},
+            new=True)
 
     if updated:
         print("updated restraunt data.")
