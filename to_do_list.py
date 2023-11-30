@@ -14,7 +14,9 @@ client = MongoClient(uri,
 db = client['final-project']
 collection = db['to_do']
 doc_count = collection.count_documents({})
-print(doc_count)
+#print(doc_count)
+
+
 
 to_do = []
 
@@ -137,10 +139,17 @@ def fill_table() -> None:
     except OperationFailure as ex:
         raise ex
 
+def number_of_documents():
+    if doc_count == 0:
+        print("Collection is empty. Fill the collection")
+    elif doc_count != 0:
+        print("Collection is filled")
+
+number_of_documents() #make a section in menu
+
+fill_table() #Make a section in menu
 
 
 
-try:
-    db.validate_collection("to_do")  # Try to validate a collection
-except pymongo.errors.OperationFailure:  # If the collection doesn't exist
-    fill_table()
+
+    
