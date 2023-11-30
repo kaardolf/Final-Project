@@ -1,4 +1,3 @@
-import pymongo
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 from pymongo.errors import OperationFailure
@@ -14,13 +13,10 @@ client = MongoClient(uri,
 db = client['final-project']
 collection = db['to_do']
 doc_count = collection.count_documents({})
-#print(doc_count)
-
+# print(doc_count)
 
 
 to_do = []
-
-
 
 
 def fill_table() -> None:
@@ -133,23 +129,19 @@ def fill_table() -> None:
         "cuisine": "Delicatessen"}
     to_do.append(resturant_18)
 
-
     try:
         collection.insert_many(to_do)
     except OperationFailure as ex:
         raise ex
 
-def number_of_documents():
+
+def number_of_documents() -> None:
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
     elif doc_count != 0:
-        print("Collection is filled")
-
-number_of_documents() #make a section in menu
-
-fill_table() #Make a section in menu
+        print("Collection is filled with", doc_count , "documents")
 
 
+number_of_documents()  # make a section in menu
 
-
-    
+fill_table()  # Make a section in menu
