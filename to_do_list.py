@@ -1,3 +1,4 @@
+import pymongo
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 from pymongo.errors import OperationFailure
@@ -16,6 +17,8 @@ doc_count = collection.count_documents({})
 print(doc_count)
 
 to_do = []
+
+
 
 
 def fill_table() -> None:
@@ -129,7 +132,15 @@ def fill_table() -> None:
     to_do.append(resturant_18)
 
 
+    try:
+        collection.insert_many(to_do)
+    except OperationFailure as ex:
+        raise ex
+
+
+
+
 try:
-    collection.insert_many(to_do)
-except OperationFailure as ex:
-    raise ex
+    db.validate_collection("to_do")  # Try to validate a collection
+except pymongo.errors.OperationFailure:  # If the collection doesn't exist
+    fill_table()
