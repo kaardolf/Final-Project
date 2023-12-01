@@ -191,6 +191,12 @@ def fill_table() -> None:
     except OperationFailure as ex:
         raise ex
 
+def number_of_documents() -> None:
+    if doc_count == 0:
+        print("Collection is empty. Fill the collection")
+    elif doc_count != 0:
+        print("Collection is filled with", doc_count , "documents")
+
 
 def insert_review() -> None:
     """inserts new reveiw for restraunt"""
@@ -389,32 +395,34 @@ def delete() -> None:
 def show_menu() -> int:
     """menu for ui"""
     options = """
-    Insert a review for a restraunt [1]
-    Insert restraunt's data [2]
-    Insert mutiple restraunts [3]
-    Read all restraunt's data [4]
-    Read one restraunt's data [5]
-    update restraunt's data [6]
-    delete a restraunt [7]
-    exit [8]
+    Make sure collection is created [1]
+    Fill the collection [2]
+    Insert a review for a restraunt [3]
+    Insert restraunt's data [4]
+    Insert mutiple restraunts [5]
+    Read all restraunt's data [6]
+    Read one restraunt's data [7]
+    update restraunt's data [8]
+    delete a restraunt [9]
+    exit [10]
     """
 
     os.system("clear")
     print(options)
-    choice = input("Enter option [1-8]: ")
+    choice = input("Enter option [1-10]: ")
 
     while True:
         if choice.isdigit():
-            if 1 <= int(choice) <= 8:
+            if 1 <= int(choice) <= 10:
                 return int(choice)
             else:
                 os.system("clear")
                 print(options)
-                choice = input("Enter a valid option[1-8]: ")
+                choice = input("Enter a valid option[1-10]: ")
         else:
             os.system("clear")
             print(options)
-            choice = input("Enter a valid option[1-8]: ")
+            choice = input("Enter a valid option[1-10]: ")
 
 
 def main() -> None:
@@ -422,18 +430,22 @@ def main() -> None:
     while True:
         choice = show_menu()
         if choice == 1:
-            insert_review()
+            number_of_documents()
         elif choice == 2:
-            insert_one()
+            fill_table()
         elif choice == 3:
-            insert_many()
+            insert_review()
         elif choice == 4:
-            read_all()
+            insert_one()
         elif choice == 5:
-            read_one()
+            insert_many()
         elif choice == 6:
-            update()
+            read_all()
         elif choice == 7:
-            delete()
+            read_one()
         elif choice == 8:
+            update()
+        elif choice == 9:
+            delete()
+        elif choice == 10:
             exit(0)
