@@ -16,7 +16,8 @@ client = MongoClient(uri,
 db = client['final-project']
 collection = db['to_do']
 doc_count = collection.count_documents({})
-print(doc_count)
+# print(doc_count)
+
 
 to_do = []
 
