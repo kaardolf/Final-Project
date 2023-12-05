@@ -29,8 +29,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "American",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_1)
 
     resturant_2 = {
@@ -38,8 +38,8 @@ def fill_table() -> None:
         "borough": "Brooklyn",
         "cuisine": "American",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_2)
 
     resturant_3 = {
@@ -47,8 +47,8 @@ def fill_table() -> None:
         "borough": "Queens",
         "cuisine": "American",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_3)
 
     resturant_4 = {
@@ -56,8 +56,8 @@ def fill_table() -> None:
         "borough": "Staten Island",
         "cuisine": "Pizza",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_4)
 
     resturant_5 = {
@@ -65,8 +65,8 @@ def fill_table() -> None:
         "borough": "Queens",
         "cuisine": "Pizza",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_5)
 
     resturant_6 = {
@@ -74,8 +74,8 @@ def fill_table() -> None:
         "borough": "Brooklyn",
         "cuisine": "Pizza",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_6)
 
     resturant_7 = {
@@ -83,8 +83,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "Irish",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_7)
 
     resturant_8 = {
@@ -92,8 +92,8 @@ def fill_table() -> None:
         "borough": "Queens",
         "cuisine": "Irish",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_8)
 
     resturant_9 = {
@@ -101,8 +101,8 @@ def fill_table() -> None:
         "borough": "Bronx",
         "cuisine": "Irish",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_9)
 
     resturant_10 = {
@@ -110,8 +110,8 @@ def fill_table() -> None:
         "borough": "Queens",
         "cuisine": "Italian",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_10)
 
     resturant_11 = {
@@ -119,8 +119,8 @@ def fill_table() -> None:
         "borough": "Staten Island",
         "cuisine": "Italian",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_11)
 
     resturant_12 = {
@@ -128,8 +128,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "Italian",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_12)
 
     resturant_13 = {
@@ -137,8 +137,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "Mexican",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_13)
 
     resturant_14 = {
@@ -146,8 +146,8 @@ def fill_table() -> None:
         "borough": "Brooklyn",
         "cuisine": "Mexican",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_14)
 
     resturant_15 = {
@@ -155,8 +155,8 @@ def fill_table() -> None:
         "borough": "Manhattan",
         "cuisine": "Mexican",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_15)
 
     resturant_16 = {
@@ -164,8 +164,8 @@ def fill_table() -> None:
         "borough": "Brooklyn",
         "cuisine": "Delicatessen",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_16)
 
     resturant_17 = {
@@ -173,8 +173,8 @@ def fill_table() -> None:
         "borough": "Staten Island",
         "cuisine": "Delicatessen",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_17)
 
     resturant_18 = {
@@ -182,8 +182,8 @@ def fill_table() -> None:
         "borough": "Staten Island",
         "cuisine": "Delicatessen",
         "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "ratings": [],
+        "comments": []}
     to_do.append(resturant_18)
 
     try:
@@ -197,8 +197,10 @@ def number_of_documents() -> None:
     """
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
+        input("Enter to exit: ")
     elif doc_count != 0:
         print("Collection is filled with", doc_count, "documents")
+        input("Enter to exit: ")
 
 
 def insert_review() -> None:
@@ -211,15 +213,15 @@ def insert_review() -> None:
         ratings = info['ratings']
         comments = info['comments']
         temp_rating = input("Enter rating for the restraunt [1-5]:")
-        valid_rating = True
-        while valid_rating:
+        valid_rating = False
+        while not valid_rating:
             if temp_rating.isdigit():
                 if (int(temp_rating) <= 0) or (int(temp_rating) >= 6):
                     print("Input not between 1 and 5")
                     temp_rating = input("Enter rating "
                                         "for the restraunt [1-5]:")
                 else:
-                    valid_rating = False
+                    valid_rating = True
             else:
                 print("Input not integer")
                 temp_rating = input("Enter rating for the restraunt [1-5]:")
@@ -258,8 +260,12 @@ def insert_one() -> None:
     cuisine = input("Enter the type of cuisine served: ")
     borough = input("Enter the borough for the restraunt: ")
 
-    restraunt = {"name": name, "cuisine": cuisine, "borough": borough,
-                 "ave_rating": None, "ratings": [int], "comments": [str]}
+    restraunt = {"name": name,
+                 "cuisine": cuisine,
+                 "borough": borough,
+                 "ave_rating": None,
+                 "ratings": [],
+                 "comments": []}
 
     try:
         collection.insert_one(restraunt)
@@ -285,8 +291,8 @@ def insert_many() -> None:
             "cuisine": cuisine,
             "borough": borough,
             "ave_rating": None,
-            "ratings": [int],
-            "comments": [str]}
+            "ratings": [],
+            "comments": []}
 
         restraunts.append(restraunt_temp)
 
@@ -306,18 +312,31 @@ def insert_many() -> None:
 
 def insert_data() -> None:
     """Insert restaurant data"""
-    user_selection = input("Enter the data you would like to insert: "
-                           "[1] Insert restaurant review"
-                           "[2] Insert data for one restaurant"
-                           "[3] Insert data for multiple restaurants")
-    if user_selection == '1':
-        insert_review()
-    elif user_selection == '2':
-        insert_one()
-    elif user_selection == '3':
-        insert_many()
-    else:
-        print("Option not valid.")
+    user_selection = input("Enter the data you would like to insert:\n"
+                           "[1] Insert restaurant review\n"
+                           "[2] Insert data for one restaurant\n"
+                           "[3] Insert data for multiple restaurants\n"
+                           "[4] Go back\n")
+    valid = False
+    while not valid:
+        if user_selection == '1':
+            valid = True
+            insert_review()
+        elif user_selection == '2':
+            valid = True
+            insert_one()
+        elif user_selection == '3':
+            valid = True
+            insert_many()
+        elif user_selection == '4':
+            valid = True
+        else:
+            print("Option not valid.")
+            user_selection = input("Enter the data you would like to insert:\n"
+                                   "[1] Insert restaurant review\n"
+                                   "[2] Insert data for one restaurant\n"
+                                   "[3] Insert data for multiple restaurants\n"
+                                   "[4] Go back\n")
 
 
 def read_all() -> None:
@@ -376,15 +395,27 @@ def read_one() -> None:
 
 def read_data() -> None:
     """Read data from DB"""
-    user_selection = input("Enter the data you would like to read: "
-                           "[1] Reviews from all restaurants"
-                           "[2] Reviews from one restaurant")
-    if user_selection == '1':
-        read_all()
-    elif user_selection == '2':
-        read_one()
-    else:
+    user_selection = input("Enter the data you would like to read:\n"
+                           "[1] Reviews from all restaurants\n"
+                           "[2] Reviews from one restaurant\n"
+                           "[3] Go back\n")
+    valid = False
+    while not valid:
+        if user_selection.isdigit():
+            if user_selection == '1':
+                valid = True
+                read_all()
+            elif user_selection == '2':
+                valid = True
+                read_one()
+            elif user_selection == '3':
+                valid = True
+
         print("Option not valid.")
+        user_selection = input("Enter the data you would like to read:\n"
+                               "[1] Reviews from all restaurants\n"
+                               "[2] Reviews from one restaurant\n"
+                               "[3] Go back\n")
 
 
 def update() -> None:
@@ -432,13 +463,13 @@ def delete() -> None:
 def show_menu() -> int:
     """menu for ui"""
     options = """
-    Make sure collection is created [1]
-    Fill the collection [2]
-    Insert a review or data for one or more restaurants [3]
-    Read all or one restraunt's data [4]
-    update restraunt's data [5]
-    delete a restraunt [6]
-    exit [7]
+    [1] Make sure collection is created
+    [2] Fill the collection
+    [3] Insert a review or data for one or more restaurants
+    [4] Read all or one restraunt's data
+    [5] update restraunt's data
+    [6] delete a restraunt
+    [7] exit
     """
 
     os.system("clear")
@@ -447,16 +478,16 @@ def show_menu() -> int:
 
     while True:
         if choice.isdigit():
-            if 1 <= int(choice) <= 10:
+            if 1 <= int(choice) <= 7:
                 return int(choice)
             else:
                 os.system("clear")
                 print(options)
-                choice = input("Enter a valid option[1-10]: ")
+                choice = input("Enter a valid option[1-7]: ")
         else:
             os.system("clear")
             print(options)
-            choice = input("Enter a valid option[1-10]: ")
+            choice = input("Enter a valid option[1-7]: ")
 
 
 def main() -> None:
