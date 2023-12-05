@@ -443,7 +443,7 @@ def show_menu() -> int:
 
     os.system("clear")
     print(options)
-    choice = input("Enter option [1-10]: ")
+    choice = input("Enter option [1-7]: ")
 
     while True:
         if choice.isdigit():
