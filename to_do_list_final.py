@@ -30,7 +30,7 @@ def fill_table() -> None:
         "cuisine": "American",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_1)
 
     resturant_2 = {
@@ -39,7 +39,7 @@ def fill_table() -> None:
         "cuisine": "American",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_2)
 
     resturant_3 = {
@@ -48,7 +48,7 @@ def fill_table() -> None:
         "cuisine": "American",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_3)
 
     resturant_4 = {
@@ -57,7 +57,7 @@ def fill_table() -> None:
         "cuisine": "Pizza",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_4)
 
     resturant_5 = {
@@ -66,7 +66,7 @@ def fill_table() -> None:
         "cuisine": "Pizza",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_5)
 
     resturant_6 = {
@@ -75,7 +75,7 @@ def fill_table() -> None:
         "cuisine": "Pizza",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_6)
 
     resturant_7 = {
@@ -84,7 +84,7 @@ def fill_table() -> None:
         "cuisine": "Irish",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_7)
 
     resturant_8 = {
@@ -93,7 +93,7 @@ def fill_table() -> None:
         "cuisine": "Irish",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_8)
 
     resturant_9 = {
@@ -102,7 +102,7 @@ def fill_table() -> None:
         "cuisine": "Irish",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_9)
 
     resturant_10 = {
@@ -111,7 +111,7 @@ def fill_table() -> None:
         "cuisine": "Italian",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_10)
 
     resturant_11 = {
@@ -120,7 +120,7 @@ def fill_table() -> None:
         "cuisine": "Italian",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_11)
 
     resturant_12 = {
@@ -129,7 +129,7 @@ def fill_table() -> None:
         "cuisine": "Italian",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_12)
 
     resturant_13 = {
@@ -138,7 +138,7 @@ def fill_table() -> None:
         "cuisine": "Mexican",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_13)
 
     resturant_14 = {
@@ -147,7 +147,7 @@ def fill_table() -> None:
         "cuisine": "Mexican",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_14)
 
     resturant_15 = {
@@ -156,7 +156,7 @@ def fill_table() -> None:
         "cuisine": "Mexican",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_15)
 
     resturant_16 = {
@@ -165,7 +165,7 @@ def fill_table() -> None:
         "cuisine": "Delicatessen",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_16)
 
     resturant_17 = {
@@ -174,7 +174,7 @@ def fill_table() -> None:
         "cuisine": "Delicatessen",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_17)
 
     resturant_18 = {
@@ -183,7 +183,7 @@ def fill_table() -> None:
         "cuisine": "Delicatessen",
         "ave_rating": None,
         "ratings": [],
-        "comments": []}
+        "comments": []}  # type: ignore
     to_do.append(resturant_18)
 
     try:
@@ -265,7 +265,7 @@ def insert_one() -> None:
                  "borough": borough,
                  "ave_rating": None,
                  "ratings": [],
-                 "comments": []}
+                 "comments": []}  # type: ignore
 
     try:
         collection.insert_one(restraunt)
@@ -292,7 +292,7 @@ def insert_many() -> None:
             "borough": borough,
             "ave_rating": None,
             "ratings": [],
-            "comments": []}
+            "comments": []}  # type: ignore
 
         restraunts.append(restraunt_temp)
 
