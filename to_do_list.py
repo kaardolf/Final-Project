@@ -176,16 +176,12 @@ def insert_review() -> None:
         to_do.append(temp_rating)
         to_do.append(temp_comment)
 
-        new_rating = 0
+        #new_rating = 0
 
-        for i in ratings:
-            new_rating = new_rating + i
-        new_rating = new_rating / len(ratings)
+       #for i in ratings:
+       #     new_rating = new_rating + i
+       # new_rating = new_rating / len(ratings)
 
-        collection.find_one_and_update(
-            {'name': name},
-            {'$set': {'ave_rating': new_rating}},
-            new=True)
         collection.find_one_and_update(
             {'name': name},
             {'$set': {'ratings': ratings}},
