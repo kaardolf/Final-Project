@@ -27,169 +27,119 @@ def fill_table() -> None:
     resturant_1 = {
         "name": "Reif's travern",
         "borough": "Manhattan",
-        "cuisine": "American",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "American", 
+        "ratings": " ",
+        "comments": " "}
     to_do.append(resturant_1)
 
     resturant_2 = {
         "name": "Regina Caterers",
         "borough": "Brooklyn",
-        "cuisine": "American",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "American"}
     to_do.append(resturant_2)
 
     resturant_3 = {
         "name": "Maloney's bar",
         "borough": "Queens",
-        "cuisine": "American",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "American"}
     to_do.append(resturant_3)
 
     resturant_4 = {
         "name": "Denino's Pizzeria Tavern",
         "borough": "Staten Island",
-        "cuisine": "Pizza",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Pizza"}
     to_do.append(resturant_4)
 
     resturant_5 = {
         "name": "Jack's Pizza and pasta",
         "borough": "Queens",
-        "cuisine": "Pizza",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Pizza"}
     to_do.append(resturant_5)
 
     resturant_6 = {
         "name": "Fascati's Pizzeria",
         "borough": "Brooklyn",
-        "cuisine": "Pizza",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Pizza"}
     to_do.append(resturant_6)
 
     resturant_7 = {
         "name": "Killarney Rose",
         "borough": "Manhattan",
-        "cuisine": "Irish",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Irish"}
     to_do.append(resturant_7)
 
     resturant_8 = {
         "name": "O'Hanlon's Pub",
         "borough": "Queens",
-        "cuisine": "Irish",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Irish"}
     to_do.append(resturant_8)
 
     resturant_9 = {
         "name": "Mcdwyers Rub",
         "borough": "Bronx",
-        "cuisine": "Irish",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Irish"}
     to_do.append(resturant_9)
 
     resturant_10 = {
         "name": "Piccola Venezia",
         "borough": "Queens",
-        "cuisine": "Italian",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Italian"}
     to_do.append(resturant_10)
 
     resturant_11 = {
         "name": "Marina Cafe",
         "borough": "Staten Island",
-        "cuisine": "Italian",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Italian"}
     to_do.append(resturant_11)
 
     resturant_12 = {
         "name": "Forlinis Resturant",
         "borough": "Manhattan",
-        "cuisine": "Italian",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Italian"}
     to_do.append(resturant_12)
 
     resturant_13 = {
         "name": "Cuchifrito",
         "borough": "Manhattan",
-        "cuisine": "Mexican",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Mexican"}
     to_do.append(resturant_13)
 
     resturant_14 = {
         "name": "Casa Pepe",
         "borough": "Brooklyn",
-        "cuisine": "Mexican",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Mexican"}
     to_do.append(resturant_14)
 
     resturant_15 = {
         "name": "Mexico Lindo Resturant",
         "borough": "Manhattan",
-        "cuisine": "Mexican",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Mexican"}
     to_do.append(resturant_15)
 
     resturant_16 = {
         "name": "Wilken'S Fine Food",
         "borough": "Brooklyn",
-        "cuisine": "Delicatessen",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Delicatessen"}
     to_do.append(resturant_16)
 
     resturant_17 = {
         "name": "Plaza bagels and deli",
         "borough": "Staten Island",
-        "cuisine": "Delicatessen",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Delicatessen"}
     to_do.append(resturant_17)
 
     resturant_18 = {
         "name": "B & M Hot Bagel & Grocery",
         "borough": "Staten Island",
-        "cuisine": "Delicatessen",
-        "ave_rating": None,
-        "ratings": [int],
-        "comments": [str]}
+        "cuisine": "Delicatessen"}
     to_do.append(resturant_18)
 
     try:
         collection.insert_many(to_do)
     except OperationFailure as ex:
         raise ex
+
+    
 
 def number_of_documents() -> None:
     if doc_count == 0:
@@ -223,8 +173,8 @@ def insert_review() -> None:
 
         temp_comment = input("Enter any commnets for the restraunt:")
 
-        ratings.append(int(temp_rating))
-        comments.append(temp_comment)
+        to_do.append(temp_rating)
+        to_do.append(temp_comment)
 
         new_rating = 0
 
