@@ -471,3 +471,5 @@ def main() -> None:
             delete()
         elif choice == 7:
             exit(0)
+
+main()
