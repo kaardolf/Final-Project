@@ -12,7 +12,7 @@ uri = ('mongodb+srv://cluster0.7kjaziu.mongodb.net/?authSource=%24'
 client = MongoClient(uri,
                      tls=True,
                      tlsCertificateKeyFile=path_to_certificate,
-                     server_api=ServerApi('1'))  # type: ignore
+                     server_api=ServerApi('1'))
 db = client['final-project']
 collection = db['to_do']
 doc_count = collection.count_documents({})
@@ -191,14 +191,11 @@ def fill_table() -> None:
     except OperationFailure as ex:
         raise ex
 
-
 def number_of_documents() -> None:
-    """Counts number of documents in DB
-    """
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
     elif doc_count != 0:
-        print("Collection is filled with", doc_count, "documents")
+        print("Collection is filled with", doc_count , "documents")
 
 
 def insert_review() -> None:
@@ -233,7 +230,7 @@ def insert_review() -> None:
 
         for i in ratings:
             new_rating = new_rating + i
-        new_rating = new_rating / len(ratings)  # type: ignore
+        new_rating = new_rating / len(ratings)
 
         collection.find_one_and_update(
             {'name': name},
@@ -280,13 +277,8 @@ def insert_many() -> None:
         cuisine = input("Enter the type of cuisine served: ")
         borough = input("Enter the borough for the restraunt: ")
 
-        restraunt_temp = {
-            "name": name,
-            "cuisine": cuisine,
-            "borough": borough,
-            "ave_rating": None,
-            "ratings": [int],
-            "comments": [str]}
+        restraunt_temp = {"name": name, "cuisine": cuisine, "borough": borough,
+                          "ave_rating": None, "ratings": [int], "comments": [str]}
 
         restraunts.append(restraunt_temp)
 
@@ -302,22 +294,6 @@ def insert_many() -> None:
     except OperationFailure as ex:
         print(ex)
         raise ex
-
-
-def insert_data() -> None:
-    """Insert restaurant data"""
-    user_selection = input("Enter the data you would like to insert: "
-                           "[1] Insert restaurant review"
-                           "[2] Insert data for one restaurant"
-                           "[3] Insert data for multiple restaurants")
-    if user_selection == '1':
-        insert_review()
-    elif user_selection == '2':
-        insert_one()
-    elif user_selection == '3':
-        insert_many()
-    else:
-        print("Option not valid.")
 
 
 def read_all() -> None:
@@ -374,19 +350,6 @@ def read_one() -> None:
         input("Enter to exit: ")
 
 
-def read_data() -> None:
-    """Read data from DB"""
-    user_selection = input("Enter the data you would like to read: "
-                           "[1] Reviews from all restaurants"
-                           "[2] Reviews from one restaurant")
-    if user_selection == '1':
-        read_all()
-    elif user_selection == '2':
-        read_one()
-    else:
-        print("Option not valid.")
-
-
 def update() -> None:
     """update data"""
     name = input("Enter the name of the restraunt you want to edit: ")
@@ -434,16 +397,19 @@ def show_menu() -> int:
     options = """
     Make sure collection is created [1]
     Fill the collection [2]
-    Insert a review or data for one or more restaurants [3]
-    Read all or one restraunt's data [4]
-    update restraunt's data [5]
-    delete a restraunt [6]
-    exit [7]
+    Insert a review for a restraunt [3]
+    Insert restraunt's data [4]
+    Insert mutiple restraunts [5]
+    Read all restraunt's data [6]
+    Read one restraunt's data [7]
+    update restraunt's data [8]
+    delete a restraunt [9]
+    exit [10]
     """
 
     os.system("clear")
     print(options)
-    choice = input("Enter option [1-7]: ")
+    choice = input("Enter option [1-10]: ")
 
     while True:
         if choice.isdigit():
@@ -468,15 +434,18 @@ def main() -> None:
         elif choice == 2:
             fill_table()
         elif choice == 3:
-            insert_data()
+            insert_review()
         elif choice == 4:
-            read_data()
+            insert_one()
         elif choice == 5:
-            update()
+            insert_many()
         elif choice == 6:
-            delete()
+            read_all()
         elif choice == 7:
+            read_one()
+        elif choice == 8:
+            update()
+        elif choice == 9:
+            delete()
+        elif choice == 10:
             exit(0)
-
-
-main()
