@@ -449,3 +449,5 @@ def main() -> None:
             delete()
         elif choice == 10:
             exit(0)
+
+main()
