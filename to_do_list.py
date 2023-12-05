@@ -270,8 +270,13 @@ def insert_many() -> None:
         cuisine = input("Enter the type of cuisine served: ")
         borough = input("Enter the borough for the restraunt: ")
 
-        restraunt_temp = {"name": name, "cuisine": cuisine, "borough": borough,
-                          "ave_rating": None, "ratings": [int], "comments": [str]}
+        restraunt_temp = {
+            "name": name,
+            "cuisine": cuisine,
+            "borough": borough,
+            "ave_rating": None,
+            "ratings": [int],
+            "comments": [str]}
 
         restraunts.append(restraunt_temp)
 
