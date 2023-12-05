@@ -12,7 +12,7 @@ uri = ('mongodb+srv://cluster0.7kjaziu.mongodb.net/?authSource=%24'
 client = MongoClient(uri,
                      tls=True,
                      tlsCertificateKeyFile=path_to_certificate,
-                     server_api=ServerApi('1'))
+                     server_api=ServerApi('1'))  # type: ignore
 db = client['final-project']
 collection = db['to_do']
 doc_count = collection.count_documents({})
@@ -191,13 +191,14 @@ def fill_table() -> None:
     except OperationFailure as ex:
         raise ex
 
+
 def number_of_documents() -> None:
     """Counts number of documents in DB
     """
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
     elif doc_count != 0:
-        print("Collection is filled with", doc_count , "documents")
+        print("Collection is filled with", doc_count, "documents")
 
 
 def insert_review() -> None:
@@ -232,7 +233,7 @@ def insert_review() -> None:
 
         for i in ratings:
             new_rating = new_rating + i
-        new_rating = new_rating / len(ratings)
+        new_rating = new_rating / len(ratings)  # type: ignore
 
         collection.find_one_and_update(
             {'name': name},
@@ -279,8 +280,13 @@ def insert_many() -> None:
         cuisine = input("Enter the type of cuisine served: ")
         borough = input("Enter the borough for the restraunt: ")
 
-        restraunt_temp = {"name": name, "cuisine": cuisine, "borough": borough,
-                          "ave_rating": None, "ratings": [int], "comments": [str]}
+        restraunt_temp = {
+            "name": name,
+            "cuisine": cuisine,
+            "borough": borough,
+            "ave_rating": None,
+            "ratings": [int],
+            "comments": [str]}
 
         restraunts.append(restraunt_temp)
 
@@ -471,5 +477,6 @@ def main() -> None:
             delete()
         elif choice == 7:
             exit(0)
+
 
 main()

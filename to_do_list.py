@@ -9,7 +9,7 @@ uri = ('mongodb+srv://cluster0.7kjaziu.mongodb.net/?authSource=%24'
 client = MongoClient(uri,
                      tls=True,
                      tlsCertificateKeyFile=path_to_certificate,
-                     server_api=ServerApi('1'))
+                     server_api=ServerApi('1'))  # type: ignore
 db = client['final-project']
 collection = db['to_do']
 doc_count = collection.count_documents({})
@@ -139,7 +139,7 @@ def number_of_documents() -> None:
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
     elif doc_count != 0:
-        print("Collection is filled with", doc_count , "documents")
+        print("Collection is filled with", doc_count, "documents")
 
 
 number_of_documents()  # make a section in menu
