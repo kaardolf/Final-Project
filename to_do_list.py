@@ -27,7 +27,7 @@ def fill_table() -> None:
     resturant_1 = {
         "name": "Reif's travern",
         "borough": "Manhattan",
-        "cuisine": "American", 
+        "cuisine": "American",
         "ratings": " ",
         "comments": " "}
     to_do.append(resturant_1)
@@ -139,13 +139,12 @@ def fill_table() -> None:
     except OperationFailure as ex:
         raise ex
 
-    
 
 def number_of_documents() -> None:
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
     elif doc_count != 0:
-        print("Collection is filled with", doc_count , "documents")
+        print("Collection is filled with", doc_count, "documents")
 
 
 def insert_review() -> None:
@@ -158,30 +157,34 @@ def insert_review() -> None:
         ratings = info['ratings']
         comments = info['comments']
         temp_rating = input("Enter rating for the restraunt [1-5]:")
-        valid_rating = True
-        while valid_rating:
+        valid_rating = False
+        while not valid_rating:
             if temp_rating.isdigit():
                 if (int(temp_rating) <= 0) or (int(temp_rating) >= 6):
                     print("Input not between 1 and 5")
                     temp_rating = input("Enter rating "
                                         "for the restraunt [1-5]:")
                 else:
-                    valid_rating = False
+                    valid_rating = True
             else:
                 print("Input not integer")
                 temp_rating = input("Enter rating for the restraunt [1-5]:")
 
         temp_comment = input("Enter any commnets for the restraunt:")
 
-        to_do.append(temp_rating)
-        to_do.append(temp_comment)
+        ratings.append(int(temp_rating))
+        comments.append(temp_comment)
 
-        #new_rating = 0
+        new_rating = 0
 
-       #for i in ratings:
-       #     new_rating = new_rating + i
-       # new_rating = new_rating / len(ratings)
+        for i in ratings:
+            new_rating = new_rating + i
+        new_rating = new_rating / len(ratings)  # type: ignore
 
+        collection.find_one_and_update(
+            {'name': name},
+            {'$set': {'ave_rating': new_rating}},
+            new=True)
         collection.find_one_and_update(
             {'name': name},
             {'$set': {'ratings': ratings}},
@@ -223,8 +226,13 @@ def insert_many() -> None:
         cuisine = input("Enter the type of cuisine served: ")
         borough = input("Enter the borough for the restraunt: ")
 
-        restraunt_temp = {"name": name, "cuisine": cuisine, "borough": borough,
-                          "ave_rating": None, "ratings": [int], "comments": [str]}
+        restraunt_temp = {
+            "name": name,
+            "cuisine": cuisine,
+            "borough": borough,
+            "ave_rating": None,
+            "ratings": [int],
+            "comments": [str]}
 
         restraunts.append(restraunt_temp)
 
@@ -387,13 +395,14 @@ def main() -> None:
             insert_many()
         elif choice == 6:
             read_all()
-        elif choice == 7:
-            read_one()
-        elif choice == 8:
-            update()
-        elif choice == 9:
-            delete()
-        elif choice == 10:
-            exit(0)
+#        elif choice == 7:
+#            read_one()
+#        elif choice == 8:
+#            update()
+#        elif choice == 9:
+#            delete()
+#        elif choice == 10:
+#            exit(0)
+
 
 main()
