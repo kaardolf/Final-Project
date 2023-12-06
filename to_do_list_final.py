@@ -291,9 +291,7 @@ def insert_many() -> None:
             "borough": borough,
             "ave_rating": None,
             "ratings": [],
-            "comments": []}  # type: ignore
-            "ratings": [],
-            "comments": []}  # type: ignore
+            "comments": []}
 
         restaurants.append(restaurant_temp)
 
