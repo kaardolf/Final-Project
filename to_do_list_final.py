@@ -354,7 +354,7 @@ def read_all() -> None:
                   f'{cuisine}, and it rated {ave_rating}/5')
             if ave_rating is not None:
                 rate_reviews = input("Would you like to see the "
-                                     "reviews for this restraunt? [Y/N]:")
+                                     "reviews for this restaurant? [Y/N]:")
                 if rate_reviews == "Y" or rate_reviews == "y":
                     for i, rating in enumerate(rating):
                         print(f'{rating}/5. Comments: {comments[i]}')
@@ -419,7 +419,7 @@ def read_data() -> None:
 
 def update() -> None:
     """update data"""
-    name = input("Enter the name of the restraunt you want to edit: ")
+    name = input("Enter the name of the restaurant you want to edit: ")
 
     change = input("Enter the item you would like to change."
                    "[name, cuisine, borough]: ")
@@ -444,10 +444,10 @@ def update() -> None:
             new=True)
 
     if updated:
-        print("updated restraunt data.")
+        print("updated restaurant data.")
         input("Enter to exit: ")
     else:
-        print("No restraunts found that match your perameter.")
+        print("No restaurants found that match your perameter.")
         input("Enter to exit: ")
 
 
