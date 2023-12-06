@@ -313,8 +313,8 @@ def insert_data() -> None:
     """Insert restaurant data"""
     user_selection = input("Enter the data you would like to insert:\n"
                            "[1] Insert restaurant review\n"
-                           "[2] Create/Insert data for one restaurant\n"
-                           "[3] Create/Insert data for multiple restaurants\n"
+                           "[2] Insert data for one restaurant\n"
+                           "[3] Insert data for multiple restaurants\n"
                            "[4] Go back\n")
     valid = False
     while not valid:
@@ -464,11 +464,11 @@ def show_menu() -> int:
     options = """
     [1] Make sure collection is created
     [2] Fill the collection
-    [3] Insert a review, create, or add for one or more restaurants
+    [3] Insert a review or data for one or more restaurants
     [4] Read all or one restaurant's data
-    [5] Update restaurant's data
-    [6] Delete a restaurant
-    [7] Exit
+    [5] update restaurant's data
+    [6] delete a restaurant
+    [7] exit
     """
 
     os.system("clear")
