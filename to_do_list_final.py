@@ -197,10 +197,8 @@ def number_of_documents() -> None:
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
         input("Enter to exit: ")
-        input("Enter to exit: ")
     elif doc_count != 0:
         print("Collection is filled with", doc_count, "documents")
-        input("Enter to exit: ")
         input("Enter to exit: ")
 
 
@@ -222,7 +220,6 @@ def insert_review() -> None:
                     temp_rating = input("Enter rating "
                                         "for the restaurant [1-5]:")
                 else:
-                    valid_rating = True
                     valid_rating = True
             else:
                 print("Input not integer")
@@ -336,12 +333,11 @@ def insert_data() -> None:
             valid = True
         else:
             print("Option not valid.")
-            user_selection = input(
-                "Enter the data you would like to insert:\n"
-                "[1] Insert restaurant review\n"
-                "[2] Create/Insert data for one restaurant\n"
-                "[3] Create/Insert data for multiple restaurants\n"
-                "[4] Go back\n")
+            user_selection = input("Enter the data you would like to insert:\n"
+                                   "[1] Insert restaurant review\n"
+                                   "[2] Create/Insert data for one restaurant\n"
+                                   "[3] Create/Insert data for multiple restaurants\n"
+                                   "[4] Go back\n")
 
 
 def read_all() -> None:
