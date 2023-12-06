@@ -1,7 +1,6 @@
 """to_do_list doc string"""
 
 import os
-import pymongo
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 from pymongo.errors import OperationFailure
