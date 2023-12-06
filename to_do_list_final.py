@@ -23,167 +23,167 @@ to_do = []
 
 def fill_table() -> None:
     """pre fill table with data"""
-    resturant_1 = {
+    restaurant_1 = {
         "name": "Reif's travern",
         "borough": "Manhattan",
         "cuisine": "American",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_1)
+    to_do.append(restaurant_1)
 
-    resturant_2 = {
+    restaurant_2 = {
         "name": "Regina Caterers",
         "borough": "Brooklyn",
         "cuisine": "American",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_2)
+    to_do.append(restaurant_2)
 
-    resturant_3 = {
+    restaurant_3 = {
         "name": "Maloney's bar",
         "borough": "Queens",
         "cuisine": "American",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_3)
+    to_do.append(restaurant_3)
 
-    resturant_4 = {
+    restaurant_4 = {
         "name": "Denino's Pizzeria Tavern",
         "borough": "Staten Island",
         "cuisine": "Pizza",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_4)
+    to_do.append(restaurant_4)
 
-    resturant_5 = {
+    restaurant_5 = {
         "name": "Jack's Pizza and pasta",
         "borough": "Queens",
         "cuisine": "Pizza",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_5)
+    to_do.append(restaurant_5)
 
-    resturant_6 = {
+    restaurant_6 = {
         "name": "Fascati's Pizzeria",
         "borough": "Brooklyn",
         "cuisine": "Pizza",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_6)
+    to_do.append(restaurant_6)
 
-    resturant_7 = {
+    restaurant_7 = {
         "name": "Killarney Rose",
         "borough": "Manhattan",
         "cuisine": "Irish",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_7)
+    to_do.append(restaurant_7)
 
-    resturant_8 = {
+    restaurant_8 = {
         "name": "O'Hanlon's Pub",
         "borough": "Queens",
         "cuisine": "Irish",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_8)
+    to_do.append(restaurant_8)
 
-    resturant_9 = {
+    restaurant_9 = {
         "name": "Mcdwyers Rub",
         "borough": "Bronx",
         "cuisine": "Irish",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_9)
+    to_do.append(restaurant_9)
 
-    resturant_10 = {
+    restaurant_10 = {
         "name": "Piccola Venezia",
         "borough": "Queens",
         "cuisine": "Italian",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_10)
+    to_do.append(restaurant_10)
 
-    resturant_11 = {
+    restaurant_11 = {
         "name": "Marina Cafe",
         "borough": "Staten Island",
         "cuisine": "Italian",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_11)
+    to_do.append(restaurant_11)
 
-    resturant_12 = {
+    restaurant_12 = {
         "name": "Forlinis Resturant",
         "borough": "Manhattan",
         "cuisine": "Italian",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_12)
+    to_do.append(restaurant_12)
 
-    resturant_13 = {
+    restaurant_13 = {
         "name": "Cuchifrito",
         "borough": "Manhattan",
         "cuisine": "Mexican",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_13)
+    to_do.append(restaurant_13)
 
-    resturant_14 = {
+    restaurant_14 = {
         "name": "Casa Pepe",
         "borough": "Brooklyn",
         "cuisine": "Mexican",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_14)
+    to_do.append(restaurant_14)
 
-    resturant_15 = {
+    restaurant_15 = {
         "name": "Mexico Lindo Resturant",
         "borough": "Manhattan",
         "cuisine": "Mexican",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_15)
+    to_do.append(restaurant_15)
 
-    resturant_16 = {
+    restaurant_16 = {
         "name": "Wilken'S Fine Food",
         "borough": "Brooklyn",
         "cuisine": "Delicatessen",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_16)
+    to_do.append(restaurant_16)
 
-    resturant_17 = {
+    restaurant_17 = {
         "name": "Plaza bagels and deli",
         "borough": "Staten Island",
         "cuisine": "Delicatessen",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_17)
+    to_do.append(restaurant_17)
 
-    resturant_18 = {
+    restaurant_18 = {
         "name": "B & M Hot Bagel & Grocery",
         "borough": "Staten Island",
         "cuisine": "Delicatessen",
         "ave_rating": None,
         "ratings": [],
         "comments": []}  # type: ignore
-    to_do.append(resturant_18)
+    to_do.append(restaurant_18)
 
     try:
         collection.insert_many(to_do)
@@ -203,29 +203,29 @@ def number_of_documents() -> None:
 
 
 def insert_review() -> None:
-    """inserts new reveiw for restraunt"""
+    """inserts new review for  restaurant"""
 
-    name = input("Eneter the name of restraunt you want to reveiw: ")
+    name = input("Enter the name of restaurant you want to review: ")
     info = collection.find_one({"name": name})
 
     if info is not None:
         ratings = info['ratings']
         comments = info['comments']
-        temp_rating = input("Enter rating for the restraunt [1-5]:")
+        temp_rating = input("Enter rating for the restaurant [1-5]:")
         valid_rating = False
         while not valid_rating:
             if temp_rating.isdigit():
                 if (int(temp_rating) <= 0) or (int(temp_rating) >= 6):
                     print("Input not between 1 and 5")
                     temp_rating = input("Enter rating "
-                                        "for the restraunt [1-5]:")
+                                        "for the restaurant [1-5]:")
                 else:
                     valid_rating = True
             else:
                 print("Input not integer")
-                temp_rating = input("Enter rating for the restraunt [1-5]:")
+                temp_rating = input("Enter rating for the restaurant [1-5]:")
 
-        temp_comment = input("Enter any commnets for the restraunt:")
+        temp_comment = input("Enter any comments for the restaurant:")
 
         ratings.append(int(temp_rating))
         comments.append(temp_comment)
@@ -255,19 +255,19 @@ def insert_review() -> None:
 
 def insert_one() -> None:
     """insert one item"""
-    name = input("Eneter the name of restraunt: ")
+    name = input("Enter the name of restaurant: ")
     cuisine = input("Enter the type of cuisine served: ")
-    borough = input("Enter the borough for the restraunt: ")
+    borough = input("Enter the borough for the restaurant: ")
 
-    restraunt = {"name": name,
-                 "cuisine": cuisine,
-                 "borough": borough,
-                 "ave_rating": None,
-                 "ratings": [],
-                 "comments": []}  # type: ignore
+    restaurant = {"name": name,
+                  "cuisine": cuisine,
+                  "borough": borough,
+                  "ave_rating": None,
+                  "ratings": [],
+                  "comments": []}  # type: ignore
 
     try:
-        collection.insert_one(restraunt)
+        collection.insert_one(restaurant)
         input("Inserted, Enter to exit: ")
     except OperationFailure as ex:
         print(ex)
@@ -277,15 +277,15 @@ def insert_one() -> None:
 def insert_many() -> None:
     """insert many items"""
 
-    restraunts = []
+    restaurants = []
     again = True
 
     while again is True:
-        name = input("Eneter the name of restraunt: ")
+        name = input("Enter the name of restaurant: ")
         cuisine = input("Enter the type of cuisine served: ")
-        borough = input("Enter the borough for the restraunt: ")
+        borough = input("Enter the borough for the restaurant: ")
 
-        restraunt_temp = {
+        restaurant_temp = {
             "name": name,
             "cuisine": cuisine,
             "borough": borough,
@@ -293,16 +293,16 @@ def insert_many() -> None:
             "ratings": [],
             "comments": []}  # type: ignore
 
-        restraunts.append(restraunt_temp)
+        restaurants.append(restaurant_temp)
 
-        more = input("Enter another restraunt? [Y/N]: ")
+        more = input("Enter another restaurant? [Y/N]: ")
         if more == "Y" or more == "y":
             again = True
         else:
             again = False
 
     try:
-        collection.insert_many(restraunts)
+        collection.insert_many(restaurants)
         input("Inserted, Enter to exit: ")
     except OperationFailure as ex:
         print(ex)
@@ -353,9 +353,9 @@ def read_all() -> None:
             print(f'{name} in {borough} serves '
                   f'{cuisine}, and it rated {ave_rating}/5')
             if ave_rating is not None:
-                rate_reveiws = input("would you like to see the "
-                                     "reveiws for this restraunt? [Y/N]:")
-                if rate_reveiws == "Y" or rate_reveiws == "y":
+                rate_reviews = input("Would you like to see the "
+                                     "reviews for this restraunt? [Y/N]:")
+                if rate_reviews == "Y" or rate_reviews == "y":
                     for i, rating in enumerate(rating):
                         print(f'{rating}/5. Comments: {comments[i]}')
         input("Enter to exit: ")
@@ -377,12 +377,12 @@ def read_one() -> None:
         ave_rating = restaurant['ave_rating']
         rating = restaurant['ratings']
         comments = restaurant['comments']
-        print(f'{name} in {borough} serves'
+        print(f'{name} in {borough} serves '
               f'{cuisine}, and it rated {ave_rating}/5')
         if ave_rating is not None:
-            rate_reveiws = input("would you like to see the "
-                                 "reveiws for this restraunt? [Y/N]:")
-            if rate_reveiws == "Y" or rate_reveiws == "y":
+            rate_reviews = input("Would you like to see the "
+                                 "reviews for this resturant? [Y/N]:")
+            if rate_reviews == "Y" or rate_reviews == "y":
                 for i, rating in enumerate(rating):
                     print(f'{rating}/5. Comments: {comments[i]}')
 
@@ -453,7 +453,7 @@ def update() -> None:
 
 def delete() -> None:
     """delete data"""
-    name = input("Enter the name of the restraunt you want to delete: ")
+    name = input("Enter the name of the restaurant you want to delete: ")
     result = collection.delete_many({"name": name})
     print(f'{result.deleted_count} records deleted!')
     input("Enter to exit: ")
@@ -465,9 +465,9 @@ def show_menu() -> int:
     [1] Make sure collection is created
     [2] Fill the collection
     [3] Insert a review or data for one or more restaurants
-    [4] Read all or one restraunt's data
-    [5] update restraunt's data
-    [6] delete a restraunt
+    [4] Read all or one restaurant's data
+    [5] update restaurant's data
+    [6] delete a restaurant
     [7] exit
     """
 
