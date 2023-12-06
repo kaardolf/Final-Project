@@ -291,7 +291,7 @@ def insert_many() -> None:
             "borough": borough,
             "ave_rating": None,
             "ratings": [],
-            "comments": []}
+            "comments": []}  # type: ignore
 
         restaurants.append(restaurant_temp)
 
@@ -331,11 +331,12 @@ def insert_data() -> None:
             valid = True
         else:
             print("Option not valid.")
-            user_selection = input("Enter the data you would like to insert:\n"
-                                   "[1] Insert restaurant review\n"
-                                   "[2] Create/Insert data for one restaurant\n"
-                                   "[3] Create/Insert data for multiple restaurants\n"
-                                   "[4] Go back\n")
+            user_selection = input(
+                "Enter the data you would like to insert:\n"
+                "[1] Insert restaurant review\n"
+                "[2] Create/Insert data for one restaurant\n"
+                "[3] Create/Insert data for multiple restaurants\n"
+                "[4] Go back\n")
 
 
 def read_all() -> None:
