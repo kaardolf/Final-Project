@@ -1,28 +1,13 @@
 """to_do_list doc string"""
 
 import os
-from pymongo import MongoClient
-from pymongo.server_api import ServerApi
-from pymongo.errors import OperationFailure
-
-path_to_certificate = 'cert.pem'
-
-uri = ('mongodb+srv://cluster0.7kjaziu.mongodb.net/?authSource=%24'
-       'external&authMechanism=MONGODB-X509&retryWrites=true&w=majority')
-client = MongoClient(uri,
-                     tls=True,
-                     tlsCertificateKeyFile=path_to_certificate,
-                     server_api=ServerApi('1'))  # type: ignore
-db = client['final-project']
-collection = db['to_do']
-doc_count = collection.count_documents({})
-
-
-to_do = []
+from utility import utility
 
 
 def fill_table() -> None:
     """pre fill table with data"""
+    to_do = []
+
     restaurant_1 = {
         "name": "Reif's travern",
         "borough": "Manhattan",
@@ -185,22 +170,18 @@ def fill_table() -> None:
         "comments": []}  # type: ignore
     to_do.append(restaurant_18)
 
-    try:
-        collection.insert_many(to_do)
-    except OperationFailure as ex:
-        raise ex
+    utility.db_insert_many(to_do)
 
 
 def number_of_documents() -> None:
     """Counts number of documents in DB
     """
+    doc_count = utility.db_count()
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
         input("Enter to exit: ")
-        input("Enter to exit: ")
     elif doc_count != 0:
         print("Collection is filled with", doc_count, "documents")
-        input("Enter to exit: ")
         input("Enter to exit: ")
 
 
@@ -208,7 +189,7 @@ def insert_review() -> None:
     """inserts new review for  restaurant"""
 
     name = input("Enter the name of restaurant you want to review: ")
-    info = collection.find_one({"name": name})
+    info = utility.db_read_one(name)
 
     if info is not None:
         ratings = info['ratings']
@@ -239,18 +220,10 @@ def insert_review() -> None:
             new_rating = new_rating + i
         new_rating = new_rating / len(ratings)  # type: ignore
 
-        collection.find_one_and_update(
-            {'name': name},
-            {'$set': {'ave_rating': new_rating}},
-            new=True)
-        collection.find_one_and_update(
-            {'name': name},
-            {'$set': {'ratings': ratings}},
-            new=True)
-        collection.find_one_and_update(
-            {'name': name},
-            {'$set': {'comments': comments}},
-            new=True)
+        utility.db_update(name, 'ave_rating', new_rating)
+        utility.db_update(name, 'ratings', ratings)
+        utility.db_update(name, 'comments', comments)
+
     else:
         print("No restaurant found that has that name.")
         input("Enter to exit: ")
@@ -269,12 +242,7 @@ def insert_one() -> None:
                   "ratings": [],
                   "comments": []}  # type: ignore
 
-    try:
-        collection.insert_one(restaurant)
-        input("Inserted, Enter to exit: ")
-    except OperationFailure as ex:
-        print(ex)
-        raise ex
+    utility.db_insert_one(restaurant)
 
 
 def insert_many() -> None:
@@ -304,16 +272,13 @@ def insert_many() -> None:
         else:
             again = False
 
-    try:
-        collection.insert_many(restaurants)
-        input("Inserted, Enter to exit: ")
-    except OperationFailure as ex:
-        print(ex)
-        raise ex
+    utility.db_insert_many(restaurants)
 
 
 def insert_data() -> None:
     """Insert restaurant data"""
+
+    os.system("clear")
     user_selection = input("Enter the data you would like to insert:\n"
                            "[1] Insert restaurant review\n"
                            "[2] Insert data for one restaurant\n"
@@ -333,7 +298,8 @@ def insert_data() -> None:
         elif user_selection == '4':
             valid = True
         else:
-            print("Option not valid.")
+            os.system("clear")
+            print("Enter a valid option.")
             user_selection = input(
                 "Enter the data you would like to insert:\n"
                 "[1] Insert restaurant review\n"
@@ -345,7 +311,7 @@ def insert_data() -> None:
 def read_all() -> None:
     """read_all"""
 
-    result = collection.find()
+    result = utility.db_read_all()
     if result:
         for doc in result:
             name = doc['name']
@@ -362,6 +328,7 @@ def read_all() -> None:
                 if rate_reviews == "Y" or rate_reviews == "y":
                     for i, rating in enumerate(rating):
                         print(f'{rating}/5. Comments: {comments[i]}')
+            print('\n')
         input("Enter to exit: ")
     else:
         print('No restaurants found. ')
@@ -372,7 +339,7 @@ def read_one() -> None:
     """read_one"""
 
     restaurant_name = input("Enter the restaurant name: ")
-    restaurant = collection.find_one({"name": restaurant_name})
+    restaurant = utility.db_read_one(restaurant_name)
 
     if restaurant is not None:
         name = restaurant['name']
@@ -398,27 +365,28 @@ def read_one() -> None:
 
 def read_data() -> None:
     """Read data from DB"""
+    os.system("clear")
     user_selection = input("Enter the data you would like to read:\n"
                            "[1] Reviews from all restaurants\n"
                            "[2] Reviews from one restaurant\n"
                            "[3] Go back\n")
     valid = False
     while not valid:
-        if user_selection.isdigit():
-            if user_selection == '1':
-                valid = True
-                read_all()
-            elif user_selection == '2':
-                valid = True
-                read_one()
-            elif user_selection == '3':
-                valid = True
-
-        print("Option not valid.")
-        user_selection = input("Enter the data you would like to read:\n"
-                               "[1] Reviews from all restaurants\n"
-                               "[2] Reviews from one restaurant\n"
-                               "[3] Go back\n")
+        if user_selection == '1':
+            valid = True
+            read_all()
+        elif user_selection == '2':
+            valid = True
+            read_one()
+        elif user_selection == '3':
+            valid = True
+        else:
+            os.system("clear")
+            print("Enter a valid option.")
+            user_selection = input("Enter the data you would like to read:\n"
+                                   "[1] Reviews from all restaurants\n"
+                                   "[2] Reviews from one restaurant\n"
+                                   "[3] Go back\n")
 
 
 def update() -> None:
@@ -430,22 +398,13 @@ def update() -> None:
 
     if change == "name":
         update_data = input("Enter the new name: ")
-        updated = collection.find_one_and_update(
-            {'name': name},
-            {'$set': {'name': update_data}},
-            new=True)
+        updated = utility.db_update(name, 'name', update_data)
     elif change == "cuisine":
         update_data = input("Enter the new cuisine: ")
-        updated = collection.find_one_and_update(
-            {'name': name},
-            {'$set': {'cuisine': update_data}},
-            new=True)
+        updated = utility.db_update(name, 'cuisine', update_data)
     elif change == "borough":
         update_data = input("Enter the new borough: ")
-        updated = collection.find_one_and_update(
-            {'name': name},
-            {'$set': {'borough': update_data}},
-            new=True)
+        updated = utility.db_update(name, 'borough', update_data)
 
     if updated:
         print("updated restaurant data.")
@@ -458,7 +417,7 @@ def update() -> None:
 def delete() -> None:
     """delete data"""
     name = input("Enter the name of the restaurant you want to delete: ")
-    result = collection.delete_many({"name": name})
+    result = utility.db_delte(name)
     print(f'{result.deleted_count} records deleted!')
     input("Enter to exit: ")
 
