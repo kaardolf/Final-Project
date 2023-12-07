@@ -12,4 +12,4 @@ This database is designed to store reviews for restaurants in various boroughs w
 | Status          | Done                                                              |
 | Location        | https://github.com/kaardolf/Final-Project                         |
 | Self Grade      | 95/100                                                            |   
-| Notes           | Almost all assignment requirements have been met. One continuous integration check not passed.                        |
+| Notes           |All assignment requirements have been met.                         |
