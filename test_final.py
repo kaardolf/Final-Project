@@ -5,7 +5,6 @@ import pymongo
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 
-
 path_to_certificate = 'cert.pem'
 
 uri = ('mongodb+srv://cluster0.7kjaziu.mongodb.net/?authSource=%24'
@@ -20,11 +19,7 @@ doc_count = collection.count_documents({})
 
 
 class TestFinal(unittest.TestCase):
-    """ Unittest class
-    """
     def test_fill_table(self):
-        """Test to see if collection exists
-        """
         try:
             db.validate_collection("to_do")
         except pymongo.errors.OperationFailure:
