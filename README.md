@@ -11,5 +11,5 @@ This database is designed to store reviews for restaurants in various boroughs w
 | Due date        | 7-December-23                                                     |
 | Status          | Done                                                              |
 | Location        | https://github.com/kaardolf/Final-Project                         |
-| Self Grade      | 100/100                                                           |   
-| Notes           | All assignment requirements have been met.                        |
+| Self Grade      | 90/100                                                            |   
+| Notes           | Almost all assignment requirements have been met. Some unittests not comeplete.                        |
