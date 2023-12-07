@@ -197,10 +197,9 @@ def number_of_documents() -> None:
     if doc_count == 0:
         print("Collection is empty. Fill the collection")
         input("Enter to exit: ")
-        input("Enter to exit: ")
+
     elif doc_count != 0:
         print("Collection is filled with", doc_count, "documents")
-        input("Enter to exit: ")
         input("Enter to exit: ")
 
 
